@@ -1,0 +1,66 @@
+.menu-btn {
+  height: 50px;
+  width: 50px;
+  border: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  &.active {
+    .menu-btn__menu {
+      display: none;
+    }
+    .menu-btn__close {
+      display: block;
+    }
+  }
+}
+
+//кнопка вкл выкл
+.menu-btn__menu {
+  display: block;
+}
+.menu-btn__close {
+  display: none;
+}
+
+//menu
+.mobile-menu {
+  display: none;
+  &.active {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 40px;
+    font-size: 30px;
+  }
+  overflow: auto;
+}
+
+//внутри меню отступы
+.menu-list__item {
+  margin-bottom: 25px;
+}
+
+.menu-list__link {
+  font-size: 30px;
+}
+
+//єто в конце когда нужно добавить для скрола меню
+body {
+  &.overflow {
+    overflow: hidden;
+  }
+}

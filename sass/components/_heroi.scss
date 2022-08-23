@@ -1,0 +1,50 @@
+.heroi__box {
+  max-width: 100%;
+  height: 400px;
+  background-image: url("../img/heroi-mob.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  @media screen and (min-width: $mobile) {
+    background-image: url("../img/heroi-tablet.jpg");
+  }
+  @media screen and (min-width: $tablet) {
+    background-image: url("../img/heroi.jpg");
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (--webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .heroi__box {
+      background-image: url("../img/heroi-mob@2x.jpg");
+    }
+  }
+}
+
+@media screen and (min-width: $mobile) {
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (--webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .heroi__box {
+      background-image: url("../img/heroi-tablet@2x.jpg");
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (--webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .heroi__box {
+      background-image: url("../img/heroi@2x.jpg");
+    }
+  }
+}
